@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Website with login form</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            window.onload = function() {
+                var loginButton = document.getElementById("loginbutton");
+                loginButton.onclick = function(event) {
+                    event.preventDefault();  // Prevent form submission
+                    var emailInput = document.querySelector(".email").value;
+                    var passwordInput = document.querySelector(".password").value;
+                    
+                    if (emailInput.includes("@") && passwordInput !== "") {
+                        alert("Login Successful");
+                        window.location.href = "Miniproject Second Page.html";
+                    } else {
+                        alert("Invalid Credentials. Please check your email and password.");
+                    }
+                };
+            };
+        </script>
+ <style>
+    body{
+        background-image: url(https://img.freepik.com/free-photo/tranquil-scene-yellow-leaves-tree-branch-generated-by-ai_188544-43222.jpg?t=st=1732634210~exp=1732637810~hmac=3f49bc469f55ed7414cdfa6797a9a2fd681ed51920081c885ae1daa79624b943&w=1060);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 90vh;
+        margin: 0;
+        padding: 0;
+        
+    }
+    .logo{
+        color: #e46e19;
+        padding-top: 15px;
+        padding-left: 10px;
+        margin-left: 80px;
+    }
+    nav ul {
+    list-style-type: none;
+    margin-left: 400px;
+    margin-top: -45px;
+    padding: 0;
+    display: flex;
+    }
+
+    nav li {
+    margin-right: 70px;
+    color: white;
+    font-weight: bold;
+    }
+    #form1{
+        margin-right: 80px;
+        margin-top: 80px;
+    }
+    form{
+        background-color: rgba(0,0,0,0.5);
+        width: 250px;
+        height: 350px;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        float: right;
+        border-radius: 10px;
+    }
+    h2{
+        background-color: white;
+        color: #ff7101;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .email{
+        border: none;
+        outline: none;
+        background: none;
+        border-bottom: 2px solid #ff7101;
+        width: 100%;
+    }
+    .password{
+        border: none;
+        outline: none;
+        background: none;
+        border-bottom: 2px solid #ff7101;
+        width: 100%;
+    }
+    .email::placeholder{
+        color: white;
+    }
+    .password::placeholder{
+        color: white;
+    }
+    #loginbutton{
+        width: 250px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: #ff7101;
+        font-weight: bold;
+        border: none;
+    } 
+    .social-icons{
+        color: white;
+        text-align: center;
+    }  
+    #search{
+        float: right;
+        margin-right: 80px;
+        margin-top: -35px;
+    }
+    .search1{
+        height: 30px;
+        border: 2px solid #ff7101;
+        outline: none;
+        background: none;
+        border-radius: 5px 0 0 5px;
+        width: 180px;
+    }
+    .search1::placeholder{
+        color: white;
+    }
+    .search2{
+        height: 35px;
+        border:none;
+        border-radius: 0 5px 5px 0;
+        margin-left: -5px;
+        background-color: #ff7101;
+        color: white;
+        width: 100px;
+    }
+    #heading{
+        color: white;
+        font-size: 50px;
+        padding-left: 10px;
+        margin-left: 80px;
+    }
+    #para{
+        color: white;
+        padding-left: 10px;
+        margin-left: 80px;
+        line-height: 30px;
+    }
+    #joinus{
+        padding-left: 10px;
+        margin-left: 90px;
+        border: none;
+        outline: none;
+        width: 150px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: #ff7101;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+ }
+    .modal-content {
+        background-color: white;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%;
+        border-radius: 10px;
+}
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+}
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+}
+    table {
+        width: 100%;
+        border-collapse: collapse;
+}
+    table, th, td {
+        border: 1px solid black;
+}
+    th, td {
+        padding: 15px;
+        text-align: left;
+}
+    th {
+        background-color: #ff7101;
+        color: white;
+}
+ </style>
+ 
+    </head>
+    <body>
+            <h1 class="logo">PraRoz</h1>
+            <nav>
+                <ul>
+                    <li>HOME</li>
+                    <li>ABOUT</li>
+                    <li>SERVICE</li>
+                    <li>DESIGN</li>
+                    <li>CONTACT</li>
+                </ul>
+            </nav>
+            <div id="search">            
+             <input type="text" placeholder="Type to Search" class="search1">  
+             <button class="search2">Search</button> 
+            </div>
+            <div id="form1">
+            <form id="form">
+                <h2>Login Here</h2>
+                <input type="email" placeholder="Enter Email Here" class="email"><br><br>
+                <input type="password" placeholder="Enter Password Here" class="password">
+                <span style="padding-left: 156px; font-size: small; color: white;">Forgot Password?</span></p>
+                <button id="loginbutton">Login</button>
+                <p style="text-align: center; color: white;">Don't have an account? <br>
+                <span style="color: #ff7101;">Sign up</span> here
+                <p style="text-align: center; color: white;">Log in with</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" style="color: white;">
+                    <i class="fab fa-facebook" style="padding-right: 20px;"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" style="color: white;">
+                    <i class="fab fa-instagram" style="padding-right: 20px;"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" style="color: white;">
+                    <i class="fab fa-twitter" style="padding-right: 20px;"></i></a>
+                    <a href="https://www.google.com" target="_blank" style="color: white;">
+                    <i class="fab fa-google" style="padding-right: 20px;"></i></a>
+                    <a href="https://www.skype.com" target="_blank" style="color: white;">
+                    <i class="fab fa-skype" style="padding-right: 20px;"></i></a>
+                </div>
+            </form>
+        </div>
+        <h1 id="heading">Web Design & <br><span style="color:#ff7101;">Development </span><br>Course </h1>
+        <p id="para">Web Design is a specialisation of the design stream. They also use HTML.<br>
+           CSS, WYSIWYG editing software, mark up validators etc.,<br>
+           to create design elements.</p><br><br>
+        <button id="joinus">JOIN US</button>  
+        </div>
+    </body>
+</html>
