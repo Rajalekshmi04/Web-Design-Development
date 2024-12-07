@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+          div{
+            height: 600px;
+            margin-top: 50px;
+          } 
+          table{
+            padding: 25px;
+          } 
+          button{
+            color: white;
+            background-color:#4070f4;
+            border-color:#4070f4 ;
+            border-radius: 5px;
+            width: 240px;
+            height: 40px;
+          }
+          .heading{
+            font-weight: 600;
+          }
+          .column{
+            height: 50px;
+          }
+          .margin{
+            padding-top: 10px;
+          }
+        </style>
+    </head>
+    <body style="background-color: #4070f4; height: 400px;">
+        <center>
+<div style="background-color: white; width: 900px;">
+    <table>
+        <tr>
+        <td><h1><span style="text-decoration: underline #4070f4;">Re</span>gistration</h1></td>
+        </tr>
+        <tr>
+        <td><h3 style="color: #9b9b9b;">Personal Details</h3></td>
+        </tr>
+        <tr class="heading">
+            <td>Full Name</td>
+            <td>Date Of Birth</td>
+            <td>Email</td>
+        </tr>
+        <tr>
+            <td class="column"><input type="text" id="Full Name" name="Full Name" placeholder="Enter your name" style="height: 30px; width: 250px; margin-right: 20px;" required ></td>
+            <td class="column"><input type="date" id="Date of birth" name="Date of birth" placeholder="Enter birth date" required style="height: 30px; width: 250px; margin-right: 20px;"></td>
+            <td class="column"><input type="email" id="Email" name="Email" placeholder="Enter your email" required style="height: 30px; width: 250px;"></td>
+        </tr>
+        <tr class="heading">
+            <td class="margin">Mobile Number</td>
+            <td class="margin">Gender</td>
+            <td class="margin">Occupation</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="number" name="number" placeholder="Enter mobile number" required style="height: 30px; width: 250px;"></td>
+            <td><input type="text" id="gender" name="gender" placeholder="Enter your Gender" required style="height: 30px; width: 250px;"></td>
+            <td><input type="text" id="Occupation" name="Occupation" placeholder="Enter Occupation" required style="height: 30px; width: 250px;"></td>
+        </tr>
+        <tr>
+            <td><h3 style="color: #9b9b9b;">Identity Details</h3></td>
+        </tr> 
+        <tr class="heading">
+            <td>ID Type</td>
+            <td>ID Number</td>
+            <td>Issue Authority</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="id type" name="id type" placeholder="Enter ID type" required style="height: 30px; width: 250px;"></td>
+            <td><input type="number" id="id number" name="id number" placeholder="Enter ID number" required style="height: 30px; width: 250px;"></td>
+            <td><input type="text" id="Issue Authority" name="Issue Authority" placeholder="Enter Issue Department" required style="height: 30px; width: 250px;"></td>
+        </tr>
+        <tr class="heading">
+            <td class="margin">Issue Date</td>
+            <td class="margin">Issue State</td>
+            <td class="margin">Expiry Date</td>
+        </tr>
+        <tr>
+            <td><input type="date" id="ID number" name="ID number" placeholder="Enter ID Issue Date" required style="height: 30px; width: 250px;"></td>
+            <td><input type="text" id="State" name="State" placeholder="Enter ID issue state" required style="height: 30px; width: 250px;"></td>
+            <td><input type="date" id="Expiry date" name="Expiry date" placeholder="Enter ID expiry date" required style="height: 30px; width: 250px;"></td>
+        </tr>
+        <tr>
+            <td colspan="3" style="padding-top: 25px;"><button style="font-weight: bold;">Next &#8594</button></td>
+        </tr>
+    </table>
+</center>
+</div>
+    </body>
+</html>
